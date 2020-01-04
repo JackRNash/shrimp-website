@@ -37,6 +37,7 @@ img#bg {
 h2, h3, h4 {
     font-family: 'Open Sans', sans-serif;
     text-align: left;
+    display: block;
 }
 
 h2 {
@@ -51,10 +52,33 @@ h2 {
 
 #shows {
     padding-bottom: 50px;
+    overflow: auto;
+    background-color: rgb(94, 223, 223);
 }
 
 #shows img {
-    max-width: 245px;
+    float: left;
+    /* display: inline-block; */
+    width: 245px;
+    /* z-index: -10; */
+}
+
+.showDesc {
+    position: relative;
+    padding-left: 300px;
+    /* color: grey; */
+    max-width: 250px;
+}
+.showDesc h3{
+    font-size: 1.75em;
+}
+
+.showDesc p {
+    font-size: 1.25em;
+}
+
+.show {
+    overflow: auto;
 }
 
 #us h3 {
@@ -64,15 +88,3 @@ h2 {
 a:link {
     color: red;
 }
-
-/* #link_bar a:visited {
-    color: #c0c0c0;
-}
-
-#link_bar a:hover {
-    color: #ffffff;
-}
-
-#link_bar a:active {
-    color: #f0f0f0;
-} */
