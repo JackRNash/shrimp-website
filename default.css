@@ -1,6 +1,23 @@
+/*****************
+ *  Body/General *
+ *****************/
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+}
+
+h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    display: block;
+}
+
+h2 {
+    font-size: 6em;
+    /* background-color: rgb(26, 26, 94); */
+    /* border: 5px solid white; */
 }
 
 /*****************
@@ -8,16 +25,32 @@ body {
  *****************/
 
 #landing {
-    font-size: 7vw;
-    color: white;
     background-attachment: fixed;
+    margin-bottom: 0;
 }
 
-h1 {
+#landing h1 {
     position: absolute;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 6vw;
+    color: white;
+    font-family: "Open Sans";
+    font-weight: lighter;
     top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#landing h2 {
+    position: absolute;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    font-family: "Open Sans";
+    font-weight: lighter;
+    top: 45%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -46,30 +79,21 @@ a:link {
     color: red;
 }
 
+.centered {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 /*****************
  *     Shows     *
  *****************/
 
-h2, h3, h4 {
-    font-family: 'Open Sans', sans-serif;
-    text-align: left;
-    display: block;
-}
-
-h2 {
-    font-size: 4em;
-}
-
-.centered {
-    padding-left: 20%;
-    padding-right: 20%;
-    /* left: 30%; */
-}
-
 #shows {
     padding-bottom: 50px;
     overflow: auto;
-    background-color: rgb(94, 223, 223);
+    background-color: rgb(197, 93, 82);
+    /* color: rgb(231, 203, 200); */
+    color: white;
 }
 
 #shows img {
@@ -108,6 +132,41 @@ h2 {
  *       About Us       *
  ************************/
 
-#us h3 {
-    font-size: 1em;
+.box {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    /* max-width: 600px; */
+}
+
+.profile img {
+    max-width: 139px;
+    border-radius: 50%;
+    float: left;
+}
+
+.profile {
+    margin: 10px;
+    flex: 0 1 550px;
+    /* padding-right: 30px; */
+}
+
+.profileDesc {
+    font-size:1.25em;
+    padding-left: 200px;
+}
+
+.year {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: grey;
+}
+
+.name {
+    font-weight: bolder;
+}
+
+.title {
+    font-weight: bold;
+    color: grey;
 }

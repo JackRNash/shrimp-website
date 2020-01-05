@@ -5,15 +5,19 @@
     <title>The Whistling Shrimp</title>
     <link rel="stylesheet" href="default.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
+    <script> AOS.init(); </script>
     <div id="landing">
         <img src="resources/shrimp_bg.jpg" id="bg" alt="A picture of us performing.">
         <h1>The Whistling Shrimp</h1>
+        <h2>Est. 1984</h2>
     </div>
 
-    <div id="desc" class="centered">
+    <div id="desc" class="centered" data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="200">
         <p>
             The Whistling Shrimp (est. 1984) is Cornell's oldest comedy troupe.
             We do long form improvisational comedy. We perform two big shows a semester, with various gigs, mini shows
@@ -28,19 +32,7 @@
 
     <div id="shows" class="centered">
         <h2> Upcoming Shows </h2>
-        <div class="show">
-            <img src="resources/show1.jpeg">
-            <div class="showDesc">
-                <h3> Bats vs. Reality </h3>
-                <p class="showInfo"> Cornell Cinema
-                    Saturday, November 17: 7 & 9 p.m. ($5)</p>
-                <p> Come help our bat friends cope with the intangible concept of reality and the second Whistling
-                    Shrimp show of the semester! </p>
-            </div>
-            </br>
-        </div class="show">
-        </br>
-        <div class="show">
+        <div class="show" data-aos="fade-right">
             <img src="resources/show2.png">
             <div class="showDesc">
                 <h3> The Whistling Shrimp Are Single </h3>
@@ -53,10 +45,124 @@
             </div>
             </br>
         </div>
+        </br>
+        <div class="show" data-aos="fade-right">
+            <img src="resources/show1.jpeg">
+            <div class="showDesc">
+                <h3> Bats vs. Reality </h3>
+                <p class="showInfo"> Cornell Cinema
+                    Saturday, November 17: 7 & 9 p.m.</p>
+                <p> Come help our bat friends cope with the intangible concept of reality and see the second Whistling
+                    Shrimp show of the semester! </p>
+            </div>
+            </br>
+        </div class="show">
     </div>
 
     <div id="us" class="centered">
         <h2> Us </h2>
+        <div id="seniors" data-aos="fade-right">
+            <h3 class="year"> Seniors </h3>
+            <div class="box">
+                <div class="profile">
+                    <img src="resources/josh.png">
+                    <div class="profileDesc">
+                        <h3 class="name">Josh</h3>
+                        <h3 class="title">Former Director</h3>
+                        <p><b>Josh</b> is the ghost that haunted your grandmother as a child and now makes her sound
+                            crazy
+                            at family reunions.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="resources/josh.png">
+                    <div class="profileDesc">
+                        <h3 class="name">Alistair</h3>
+                        <h3 class="title">Former Director</h3>
+                        <p>A short but funny one sentence about myself ha ha ha.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="resources/alex.png">
+                    <div class="profileDesc">
+                        <h3 class="name">Alex</h3>
+                        <h3 class="title">Co-Director</h3>
+                        <p><b>Alex</b> is British but nobody tell him it's a secret. Shhhhh.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="resources/reed.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Reed</h3>
+                        <h3 class="title">Co-Director</h3>
+                        <p><b>Reed</b> can only fall asleep if he recites the alphabet (out of order) and sings Hungry
+                            Like
+                            The Wolf (also out of order).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="juniors" data-aos="fade-left">
+            <h3 class="year"> Junior </h3>
+            <div class="box">
+                <div class="profile">
+                    <img src="resources/jocelyn.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Jocelyn</h3>
+                        <h3 class="title">General Manager</h3>
+                        <p><b>Jocelyn</b> is the only known person alive to have smaller people living inside her
+                            controlling her actions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sophomores" data-aos="fade-right">
+            <h3 class="year"> Sophomores </h3>
+            <div class="box">
+                <div class="profile">
+                    <img src="resources/jack.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Jack</h3>
+                        <h3 class="title">Treasurer</h3>
+                        <p>A short but funny one sentence about myself ha ha ha.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="resources/jack.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Sydney</h3>
+                        <p>A short but funny one sentence about myself ha ha ha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="freshman" data-aos="fade-left">
+            <h3 class="year"> Freshman </h3>
+            <div class="box">
+                <div class="profile">
+                    <img src="resources/jocelyn.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Jessie</h3>
+                        <h3 class="title">Room Announcer</h3>
+                        <p>A short but funny one sentence about myself ha ha ha.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="resources/jocelyn.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Anna</h3>
+                        <p>A short but funny one sentence about myself ha ha ha.</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="resources/jocelyn.jpg">
+                    <div class="profileDesc">
+                        <h3 class="name">Ryan</h3>
+                        <p>A short but funny one sentence about myself ha ha ha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
