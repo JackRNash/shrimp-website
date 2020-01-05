@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*****************
+ * Splash Image  *
+ *****************/
+
+#landing {
+    font-size: 7vw;
+    color: white;
+    background-attachment: fixed;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+img#bg {
+    width: 100%;
+    /* overflow: hidden; 
+    z-index: -1; */
+}
+
+/******************************
+ * Short Description of Group * 
+ ******************************/
+
+#desc {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    /* max-width: 40%; */
+}
+
+a:link {
+    color: red;
+}
+
+/*****************
+ *     Shows     *
+ *****************/
+
+h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    display: block;
+}
+
+h2 {
+    font-size: 4em;
+}
+
+.centered {
+    padding-left: 20%;
+    padding-right: 20%;
+    /* left: 30%; */
+}
+
+#shows {
+    padding-bottom: 50px;
+    overflow: auto;
+    background-color: rgb(94, 223, 223);
+}
+
+#shows img {
+    float: left;
+    /* display: inline-block; */
+    width: 245px;
+    /* z-index: -10; */
+}
+
+.showDesc {
+    position: relative;
+    padding-left: 300px;
+    /* color: grey; */
+}
+
+.showDesc h3 {
+    font-size: 1.75em;
+    /* max-width: 250px; */
+}
+
+.showDesc p {
+    font-size: 1.25em;
+    max-width: 400px;
+}
+
+.showInfo {
+    white-space: pre-line;
+    font-weight: bold;
+}
+
+.show {
+    overflow: auto;
+}
+
+/************************
+ *       About Us       *
+ ************************/
+
+#us h3 {
+    font-size: 1em;
+}
