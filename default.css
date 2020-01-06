@@ -16,8 +16,14 @@ h2, h3, h4 {
 
 h2 {
     font-size: 6em;
+    font-weight: bold;
     /* background-color: rgb(26, 26, 94); */
     /* border: 5px solid white; */
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
 }
 
 /*****************
@@ -75,13 +81,21 @@ img#bg {
     /* max-width: 40%; */
 }
 
-a:link {
+#desc a:link {
     color: red;
 }
 
 .centered {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .centered {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
 }
 
 /*****************
@@ -141,19 +155,29 @@ a:link {
 
 .profile img {
     max-width: 139px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     float: left;
 }
 
 .profile {
     margin: 10px;
-    flex: 0 1 550px;
+    flex: 0 0 auto;
+    max-width: 550px;
     /* padding-right: 30px; */
 }
 
 .profileDesc {
-    font-size:1.25em;
+    font-size: 1.25em;
     padding-left: 200px;
+}
+
+.profileDesc p {
+    margin-top: -10px;
+}
+
+.profileDesc p b {
+    /* Overrides the bold tags in orginal descriptions */
+    font-weight: normal;
 }
 
 .year {
@@ -168,5 +192,108 @@ a:link {
 
 .title {
     font-weight: bold;
+    font-size: .75em;
     color: grey;
+    margin-top: -25px;
 }
+
+a:link.button {
+    padding: 15px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    text-decoration: none;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Shutter Out Horizontal - from Hover.css */
+
+.shutter {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 10px rgb(128, 0, 0, 0);
+    /* box-shadow: 0 0 10px rgba(107, 88, 88, 0); */
+    /* border: 2px solid maroon; */
+    border-radius: 8px;
+    position: relative;
+    /* background: rgb(248, 224, 224); */
+    color: maroon;
+    background: #e1e1e1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.shutter:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: crimson;
+    /* background: #2098D1; */
+    border-radius: 8px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.shutter:hover, .shutter:focus, .shutter:active {
+    color: white;
+}
+
+.shutter:hover:before, .shutter:focus:before, .shutter:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    border-radius: 8px;
+}
+
+/************
+ *  F.A.Q.  *
+ ************/
+
+#faq {
+    background: rgb(231, 163, 37);
+    color: maroon;
+}
+
+#faq h2 {
+    margin-bottom: 10px;
+}
+
+#faq h3 {
+    margin: 0px;
+    font-size: 5em;
+}
+
+#faq h4 {
+    font-weight: bold;
+}
+
+#improv_faq, #shows_faq, #auditions_faq {
+    max-width: 350px;
+    text-align: justify;
+    text-justify: inter-word;
+    flex: 0 1 auto;
+}
+
+/************
+ *  Alumns  *
+ ************/
