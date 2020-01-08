@@ -18,6 +18,7 @@ h2 {
     font-size: 6em;
     font-weight: bold;
     text-align: center;
+    font-family: "Playfair Display";
     /* background-color: rgb(26, 26, 94); */
     /* border: 5px solid white; */
 }
@@ -45,30 +46,28 @@ h2 {
 
 #splash {
     position: absolute;
-    /* top: auto; */
-    /* left: auto; */
-    top: 50%;
+    top: 42%;
     left: 50%;
     /* margin-right: -50%; */
     transform: translate(-50%, -50%);
-}
-
-#landing h1 {
-    /* position: absolute; */
+    font-family: "Playfair Display";
+    /* font-family: "Open Sans"; */
+    /* font-weight: lighter; */
+    font-weight: bold;
     text-align: center;
-    font-size: 6vw;
-    /* color: white; */
-    font-family: "Open Sans";
-    font-weight: lighter;
-    /* top: 25%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; */
 }
 
-#landing h2 {
+#splash h1 {
+    font-size: 7vw;
+    font-weight: normal;
+}
+
+#splash h2 {
+    margin-top: -5%;
     font-size: 2.5vw;
+    /* font-weight: lighter; */
+    font-weight: normal;
+    font-family: "Playfair Display";
 }
 
 #logo {
@@ -76,8 +75,6 @@ h2 {
     text-align: center;
     font-size: 2.5vw;
     /* color: white; */
-    font-family: "Open Sans";
-    font-weight: lighter;
     /* margin-top: -100px; */
     width: 75%;
     top: 40%;
