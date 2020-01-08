@@ -17,6 +17,7 @@ h2, h3, h4 {
 h2 {
     font-size: 6em;
     font-weight: bold;
+    text-align: center;
     /* background-color: rgb(26, 26, 94); */
     /* border: 5px solid white; */
 }
@@ -31,32 +32,55 @@ h2 {
  *****************/
 
 #landing {
-    background-attachment: fixed;
-    margin-bottom: 0;
+    /* background-attachment: fixed; */
+    /* background-image: url(resources/shrimp_bg.jpg); */
+    /* background-size: 100%; */
+    /* background-repeat: no-repeat; */
+    /* margin-bottom: 100px; */
+    position: relative;
+    /* height: 75vh; */
+    color: white;
+    /* overflow: clip; */
+}
+
+#splash {
+    position: absolute;
+    /* top: auto; */
+    /* left: auto; */
+    top: 50%;
+    left: 50%;
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%);
 }
 
 #landing h1 {
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     font-size: 6vw;
-    color: white;
+    /* color: white; */
     font-family: "Open Sans";
     font-weight: lighter;
-    top: 25%;
+    /* top: 25%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 1; */
 }
 
 #landing h2 {
+    font-size: 2.5vw;
+}
+
+#logo {
     position: absolute;
     text-align: center;
-    font-size: 3vw;
-    color: white;
+    font-size: 2.5vw;
+    /* color: white; */
     font-family: "Open Sans";
     font-weight: lighter;
-    top: 45%;
+    /* margin-top: -100px; */
+    width: 75%;
+    top: 40%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -65,8 +89,8 @@ h2 {
 
 img#bg {
     width: 100%;
-    /* overflow: hidden; 
-    z-index: -1; */
+    /* overflow: hidden;  */
+    z-index: -1;
 }
 
 /******************************
@@ -130,7 +154,7 @@ img#bg {
 
 .showDesc p {
     font-size: 1.25em;
-    max-width: 400px;
+    /* max-width: 400px; */
 }
 
 .showInfo {
@@ -150,25 +174,23 @@ img#bg {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    /* max-width: 600px; */
 }
 
 .profile img {
     max-width: 139px;
     /* border-radius: 50%; */
+    
+    margin-left: -17px;
     float: left;
-}
-
-.profile {
-    margin: 10px;
-    flex: 0 0 auto;
-    max-width: 550px;
-    /* padding-right: 30px; */
+    position: relative;
+    /* border: 1px solid yellow; */
+    /* top: 20; */
 }
 
 .profileDesc {
     font-size: 1.25em;
-    padding-left: 200px;
+    padding-left: 160px;
+    height: 200px;
 }
 
 .profileDesc p {
@@ -208,6 +230,7 @@ a:link.button {
     text-align: center;
     left: 50%;
     margin-right: -50%;
+    margin-top: 10px;
     transform: translate(-50%, -50%);
 }
 
@@ -285,10 +308,11 @@ a:link.button {
 
 #faq h4 {
     font-weight: bold;
+    margin-bottom: -15px;
 }
 
 #improv_faq, #shows_faq, #auditions_faq {
-    max-width: 350px;
+    /* max-width: 350px; */
     text-align: justify;
     text-justify: inter-word;
     flex: 0 1 auto;

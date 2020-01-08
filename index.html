@@ -3,18 +3,54 @@
 
 <head>
     <title>The Whistling Shrimp</title>
-    <link rel="stylesheet" href="default.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="default.css">
 </head>
 
 <body>
-    <script> AOS.init(); </script>
+    <script> AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        }); 
+    </script>
+
     <div id="landing">
-        <img src="resources/shrimp_bg.jpg" id="bg" alt="A picture of us performing.">
-        <h1>The Whistling Shrimp</h1>
-        <h2>Est. 1984</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <img src="resources/shrimp_bg.jpg" id="bg" alt="A picture of us performing.">
+                    <!-- <img src="resources/logo.png" id="logo" alt="The Whistling Shrimp: Cornell's Oldest Improv Comedy Group"> -->
+                    <div id="splash">
+                        <h1>The Whistling Shrimp</h1>
+                        <h2>Cornell's Oldest Improv Comedy Group</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div id="desc" class="centered" data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="200">
@@ -32,204 +68,278 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-    <div id="shows" class="centered">
-        <h2> Upcoming Shows </h2>
-        <div class="show" data-aos="fade-right">
-            <img src="resources/show2.png">
-            <div class="showDesc">
-                <h3> The Whistling Shrimp Are Single </h3>
-                <p class="showInfo"> Risley Theater
-                    Friday, September 28: 8 p.m.
-                    Saturday, September 29: 7 & 9 p.m.</p>
-                <p> Hi, we’re the whistling shrimp. We like long walks on the beach, candlelit dinners, and making jokes
-                    in an improvised manner.
-                </p>
+    <div id="shows">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2> Upcoming Shows </h2>
+                </div>
             </div>
-            </br>
+            <div class="row">
+                <div class="show col-sm-4-" data-aos="fade-right">
+                    <img src="resources/show2.png">
+                    <div class="showDesc">
+                        <h3> The Whistling Shrimp Are Single </h3>
+                        <p class="showInfo"> Risley Theater
+                            Friday, September 28: 8 p.m.
+                            Saturday, September 29: 7 & 9 p.m.</p>
+                        <p> Hi, we’re the whistling shrimp. We like long walks on the beach, candlelit dinners, and
+                            making
+                            jokes
+                            in an improvised manner.
+                        </p>
+                    </div>
+                    </br>
+                </div>
+                </br>
+                <div class="show col-sm-4-" data-aos="fade-right">
+                    <img src="resources/show1.jpeg">
+                    <div class="showDesc">
+                        <h3> Bats vs. Reality </h3>
+                        <p class="showInfo"> Cornell Cinema
+                            Saturday, November 17: 7 & 9 p.m.</p>
+                        <p> Come help our bat friends cope with the intangible concept of reality and see the second
+                            Whistling
+                            Shrimp show of the semester! </p>
+                    </div>
+                    </br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="us">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2> About Us </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div id="seniors" data-aos="fade-right">
+                    <div class="col">
+                        <h3 class="year"> Seniors </h3>
+                    </div>
+                    <div class="w-100"></div>
+                    <!-- <div class="box"> -->
+                    <div class="profile col-lg-6">
+                        <img src="resources/josh.png">
+                        <div class="profileDesc">
+                            <h3 class="name">Josh</h3>
+                            <h3 class="title">Former Director</h3>
+                            <p><b>Josh</b> is the ghost that haunted your grandmother as a child and now makes
+                                her sound crazy at family reunions.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile col-lg-6">
+                        <img src="resources/josh.png">
+                        <div class="profileDesc">
+                            <h3 class="name">Alistair</h3>
+                            <h3 class="title">Former Director</h3>
+                            <p>A short but funny singular sentence about myself.</p>
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="profile col-lg-6">
+                        <img src="resources/alex.png">
+                        <div class="profileDesc">
+                            <h3 class="name">Alex</h3>
+                            <h3 class="title">Co-Director</h3>
+                            <p><b>Alex</b> is British but nobody tell him it's a secret. Shhhhh.</p>
+                        </div>
+                    </div>
+                    <div class="profile col-lg-6">
+                        <img src="resources/reed.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Reed</h3>
+                            <h3 class="title">Co-Director</h3>
+                            <p><b>Reed</b> can only fall asleep if he recites the alphabet (out of order) and
+                                sings
+                                Hungry
+                                Like
+                                The Wolf (also out of order).</p>
+                        </div>
+                        <!-- </div> -->
+
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="juniors" data-aos="fade-left">
+                    <div class="col">
+                        <h3 class="year"> Junior </h3>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="profile col-lg-6">
+                        <img src="resources/jocelyn.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Jocelyn</h3>
+                            <h3 class="title">General Manager</h3>
+                            <p><b>Jocelyn</b> is the only known person alive to have smaller people living
+                                inside
+                                her
+                                controlling her actions.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="sophomores" data-aos="fade-right">
+                    <div class="col">
+                        <h3 class="year"> Sophomores </h3>
+                    </div>
+
+                    <div class="profile col-lg-6">
+                        <img src="resources/jack.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Jack</h3>
+                            <h3 class="title">Treasurer</h3>
+                            <p>A short but funny singular sentence about myself.</p>
+                        </div>
+                    </div>
+
+                    <div class="profile col-lg-6">
+                        <img src="resources/jack.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Sydney</h3>
+                            <p>A short but funny singular sentence about myself.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div id="freshman" data-aos="fade-left">
+                    <div class="col">
+                        <h3 class="year"> Freshman </h3>
+                    </div>
+
+                    <div class="profile col-lg-6">
+                        <img src="resources/jocelyn.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Jessie</h3>
+                            <h3 class="title">Room Coordinator</h3>
+                            <p>A short but funny singular sentence about myself.</p>
+                        </div>
+                    </div>
+                    <div class="profile col-lg-6">
+                        <img src="resources/jocelyn.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Anna</h3>
+                            <p>A short but funny singular sentence about myself.</p>
+                        </div>
+                    </div>
+                    <div class="profile col-lg-6">
+                        <img src="resources/jocelyn.jpg">
+                        <div class="profileDesc">
+                            <h3 class="name">Ryan</h3>
+                            <p>A short but funny singular sentence about myself.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="#alumns" id="toAlumns" class="button shutter">Our Alumns</a>
+                </div>
+            </div>
         </div>
         </br>
-        <div class="show" data-aos="fade-right">
-            <img src="resources/show1.jpeg">
-            <div class="showDesc">
-                <h3> Bats vs. Reality </h3>
-                <p class="showInfo"> Cornell Cinema
-                    Saturday, November 17: 7 & 9 p.m.</p>
-                <p> Come help our bat friends cope with the intangible concept of reality and see the second Whistling
-                    Shrimp show of the semester! </p>
-            </div>
-            </br>
-        </div class="show">
+        </br>
+    </div>
     </div>
 
-    <div id="us" class="centered">
-        <h2> About Us </h2>
-        <div id="seniors" data-aos="fade-right">
-            <h3 class="year"> Seniors </h3>
-            <div class="box">
-                <div class="profile">
-                    <img src="resources/josh.png">
-                    <div class="profileDesc">
-                        <h3 class="name">Josh</h3>
-                        <h3 class="title">Former Director</h3>
-                        <p><b>Josh</b> is the ghost that haunted your grandmother as a child and now makes her sound
-                            crazy
-                            at family reunions.</p>
-                    </div>
-                </div>
-                <div class="profile">
-                    <img src="resources/josh.png">
-                    <div class="profileDesc">
-                        <h3 class="name">Alistair</h3>
-                        <h3 class="title">Former Director</h3>
-                        <p>A short but funny one sentence about myself ha ha ha.</p>
-                    </div>
-                </div>
-                <div class="profile">
-                    <img src="resources/alex.png">
-                    <div class="profileDesc">
-                        <h3 class="name">Alex</h3>
-                        <h3 class="title">Co-Director</h3>
-                        <p><b>Alex</b> is British but nobody tell him it's a secret. Shhhhh.</p>
-                    </div>
-                </div>
-                <div class="profile">
-                    <img src="resources/reed.jpg">
-                    <div class="profileDesc">
-                        <h3 class="name">Reed</h3>
-                        <h3 class="title">Co-Director</h3>
-                        <p><b>Reed</b> can only fall asleep if he recites the alphabet (out of order) and sings Hungry
-                            Like
-                            The Wolf (also out of order).</p>
-                    </div>
+    <div id="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Frequently Asked Questions</h2>
                 </div>
             </div>
-        </div>
-        <div id="juniors" data-aos="fade-left">
-            <h3 class="year"> Junior </h3>
-            <div class="box">
-            <div class="profile">
-                <img src="resources/jocelyn.jpg">
-                <div class="profileDesc">
-                    <h3 class="name">Jocelyn</h3>
-                    <h3 class="title">General Manager</h3>
-                    <p><b>Jocelyn</b> is the only known person alive to have smaller people living inside her
-                        controlling her actions.</p>
+            <!-- <div class="box"> -->
+            <div class="row">
+                <div id="improv_faq" class="col-lg-4">
+                    <h3>Improv</h3>
+                    <h4>What is it exactly that you do?</h4>
+                    <p>We improvise! We take audience suggestions and using them to create everything from
+                        monologues to
+                        scenes to mini-plays on the spot, all of which are hilarious.</p>
+                    <h4>Do you ever reuse material?</h4>
+                    <p>Nope! Even from practice we'll NEVER reuse a scene. Making it up on the fly leads to better
+                        scenes,
+                        and a better experience for the audience. Also that means that every one of our shows, even
+                        the
+                        ones
+                        on the same weekend, are totally, 100% different, new material.</p>
+                    <h4>Then how can you possibly practice?</h4>
+                    <p>We practice doing scenes (with our own suggestions) and do exercises (yes there are improv
+                        exercises). The point of practice is not to gain a repertoire of jokes, but to get used to
+                        performing with the other members and to learn how to consistently build a hilarious scene
+                        from
+                        scratch.</p>
+                    <h4>Wait... so... are you an A Cappella group?</h4>
+                    <p>No! Please stop asking.</p>
+                    <h4>But you sing, right?</h4>
+                    <p>Very poorly.</p>
+                    <h4>Well then, heheh, do you whistle?</h4>
+                    <p>Nope.</p>
                 </div>
-            </div>
-            </div>
-        </div>
-        <div id="sophomores" data-aos="fade-right">
-            <h3 class="year"> Sophomores </h3>
-            <div class="box">
-                <div class="profile">
-                    <img src="resources/jack.jpg">
-                    <div class="profileDesc">
-                        <h3 class="name">Jack</h3>
-                        <h3 class="title">Treasurer</h3>
-                        <p>A short but funny one sentence about myself ha ha ha.</p>
-                    </div>
+                <div id="shows_faq" class="col-lg-4">
+                    <h3>Shows</h3>
+                    <h4>Should I come to a show?</h4>
+                    <p> Absolutely! There's nothing quite like watching scenes being written and performed on the
+                        spot
+                        in front of you. Come, you'll have an absolute blast.</p>
+                    <h4>I'm in! Where can I get tickets?</h4>
+                    <p>If you know a shrimp member or see us advertising around campus, buy tickets <b>in
+                            person</b>.
+                        Emailing
+                        us at <b>shrimp@cornell.edu</b> will reserve you tickets. And in an interesting new turn of
+                        events
+                        you can
+                        purchase your ticket ONLINE! You can also get tickets <b>at the door</b> before a show, but
+                        if
+                        it's
+                        already
+                        sold out you might not get a seat. Get or reserve your tickets in advance!</p>
+                    <h4>That show was AWESOME, how do I know when the next one is?</h4>
+                    <p>The best thing to do is join our list-serv (email us at shrimp@cornell.edu and we'll add
+                        you).
+                        You'll
+                        get updates about shows and performances, and we promise not to send more than a couple
+                        emails a
+                        semester. We're not jerks. Also, keep an eye out for posters, pamphlets and the occasional
+                        shrimp
+                        running around in a maroon shirt. These usually herald an upcoming show.</p>
+                    <h4>I was disappointed that there was no A Cappella at your show.</h4>
+                    <p>That is not a question.</p>
                 </div>
-                <div class="profile">
-                    <img src="resources/jack.jpg">
-                    <div class="profileDesc">
-                        <h3 class="name">Sydney</h3>
-                        <p>A short but funny one sentence about myself ha ha ha.</p>
-                    </div>
+                <div id="auditions_faq" class="col-lg-4">
+                    <h3>Auditions</h3>
+                    <h4>When are auditions?</h4>
+                    <p>We hold auditions every September. Look for us at the beginning of the Fall semester!</p>
+                    <h4>Should I try out?</h4>
+                    <p>Yes! Auditions are fun, as well as stress and judgment free. Also, we usually take an even
+                        split
+                        of
+                        people with and without previous experience, so don't feel like you need to know what you're
+                        doing
+                        to try out.</p>
+                    <h4>How many new members do you take?</h4>
+                    <p>It varies every year. We don't have a maximum number; if we love five people who try out,
+                        we'll
+                        take
+                        them all. The number has typically ranged from two to five, with everything in between.</p>
+                    <h4>Seriously though, you're an A Cappella group aren't you?</h4>
+                    <p>Still no.</p>
                 </div>
-            </div>
-        </div>
-        <div id="freshman" data-aos="fade-left">
-            <h3 class="year"> Freshman </h3>
-            <div class="box">
-                <div class="profile">
-                    <img src="resources/jocelyn.jpg">
-                    <div class="profileDesc">
-                        <h3 class="name">Jessie</h3>
-                        <h3 class="title">Room Coordinator</h3>
-                        <p>A short but funny one sentence about myself ha ha ha.</p>
-                    </div>
-                </div>
-                <div class="profile">
-                    <img src="resources/jocelyn.jpg">
-                    <div class="profileDesc">
-                        <h3 class="name">Anna</h3>
-                        <p>A short but funny one sentence about myself ha ha ha.</p>
-                    </div>
-                </div>
-                <div class="profile">
-                    <img src="resources/jocelyn.jpg">
-                    <div class="profileDesc">
-                        <h3 class="name">Ryan</h3>
-                        <p>A short but funny one sentence about myself ha ha ha.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="#alumns" id="toAlumns" class="button shutter">Our Alumns</a>
-    </div>
-
-    <div id="faq" class="centered">
-        <h2>Frequently Asked Questions</h2>
-        <div class="box">
-            <div id="improv_faq">
-                <h3>Improv</h3>
-                <h4>What is it exactly that you do?</h4>
-                <p>We improvise! We take audience suggestions and using them to create everything from monologues to
-                    scenes to mini-plays on the spot, all of which are hilarious.</p>
-                <h4>Do you ever reuse material?</h4>
-                <p>Nope! Even from practice we'll NEVER reuse a scene. Making it up on the fly leads to better scenes,
-                    and a better experience for the audience. Also that means that every one of our shows, even the ones
-                    on the same weekend, are totally, 100% different, new material.</p>
-                <h4>Then how can you possibly practice?</h4>
-                <p>We practice doing scenes (with our own suggestions) and do exercises (yes there are improv
-                    exercises). The point of practice is not to gain a repertoire of jokes, but to get used to
-                    performing with the other members and to learn how to consistently build a hilarious scene from
-                    scratch.</p>
-                <h4>Wait... so... are you an A Cappella group?</h4>
-                <p>No! Please stop asking.</p>
-                <h4>But you sing, right?</h4>
-                <p>Very poorly.</p>
-                <h4>Well then, heheh, do you whistle?</h4>
-                <p>Nope.</p>
-            </div>
-            <div id="shows_faq">
-                <h3>Shows</h3>
-                <h4>Should I come to a show?</h4>
-                <p> Absolutely! There's nothing quite like watching scenes being written and performed on the spot
-                    in front of you. Come, you'll have an absolute blast.</p>
-                <h4>I'm in! Where can I get tickets?</h4>
-                <p>If you know a shrimp member or see us advertising around campus, buy tickets <b>in person</b>.
-                    Emailing
-                    us at <b>shrimp@cornell.edu</b> will reserve you tickets. And in an interesting new turn of events
-                    you can
-                    purchase your ticket ONLINE! You can also get tickets <b>at the door</b> before a show, but if it's
-                    already
-                    sold out you might not get a seat. Get or reserve your tickets in advance!</p>
-                <h4>That show was AWESOME, how do I know when the next one is?</h4>
-                <p>The best thing to do is join our list-serv (email us at shrimp@cornell.edu and we'll add you). You'll
-                    get updates about shows and performances, and we promise not to send more than a couple emails a
-                    semester. We're not jerks. Also, keep an eye out for posters, pamphlets and the occasional shrimp
-                    running around in a maroon shirt. These usually herald an upcoming show.</p>
-                <h4>I was disappointed that there was no A Cappella at your show.</h4>
-                <p>That is not a question.</p>
-            </div>
-            <div id="auditions_faq">
-                <h3>Auditions</h3>
-                <h4>When are auditions?</h4>
-                <p>We hold auditions every September. Look for us at the beginning of the Fall semester!</p>
-                <h4>Should I try out?</h4>
-                <p>Yes! Auditions are fun, as well as stress and judgment free. Also, we usually take an even split of
-                    people with and without previous experience, so don't feel like you need to know what you're doing
-                    to try out.</p>
-                <h4>How many new members do you take?</h4>
-                <p>It varies every year. We don't have a maximum number; if we love five people who try out, we'll take
-                    them all. The number has typically ranged from two to five, with everything in between.</p>
-                <h4>Seriously though, you're an A Cappella group aren't you?</h4>
-                <p>Still no.</p>
             </div>
         </div>
     </div>
-
     <!-- <div id="alumns" class="centered">
         <h2>Our Alumns</h2>
     </div> -->
