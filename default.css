@@ -2,6 +2,14 @@
  *  Body/General *
  *****************/
 
+ :root {
+    --dark-shade: #1C202A;
+    --dark-accent: #C26D6E;
+    --shrimp-red: #D1523E;
+    --light-accent: #919294;
+    --light-shade: #F5F2F1;
+  }
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -18,7 +26,7 @@ h2 {
     font-size: 6em;
     font-weight: bold;
     text-align: center;
-    font-family: "Playfair Display";
+    font-family: "Playfair Display", serif;
     /* background-color: rgb(26, 26, 94); */
     /* border: 5px solid white; */
 }
@@ -99,11 +107,13 @@ img#bg {
     font-size: 1.5em;
     padding-top: 10px;
     padding-bottom: 30px;
+    background-color: var(--light-shade);
+    color: var(--dark-shade);
     /* max-width: 40%; */
 }
 
 #desc a:link {
-    color: red;
+    color: var(--shrimp-red);
 }
 
 .centered {
@@ -126,9 +136,10 @@ img#bg {
 #shows {
     padding-bottom: 50px;
     overflow: auto;
-    background-color: rgb(197, 93, 82);
-    /* color: rgb(231, 203, 200); */
-    color: white;
+    background-color: var(--dark-accent);
+    color: var(--light-shade);
+    /* background-color: rgb(197, 93, 82); */
+    /* color: white; */
 }
 
 #shows img {
@@ -173,6 +184,11 @@ img#bg {
     flex-flow: row wrap;
 }
 
+#us {
+    background-color: var(--light-shade);
+    color: var(--dark-shade);
+}
+
 .profile img {
     max-width: 139px;
     /* border-radius: 50%; */
@@ -202,7 +218,8 @@ img#bg {
 .year {
     font-size: 1.75em;
     font-weight: bold;
-    color: grey;
+    color: var(--dark-shade);
+    font-family: "Playfair Display";
 }
 
 .name {
@@ -212,7 +229,7 @@ img#bg {
 .title {
     font-weight: bold;
     font-size: .75em;
-    color: grey;
+    color: var(--dark-accent);
     margin-top: -25px;
 }
 
@@ -244,8 +261,10 @@ a:link.button {
     border-radius: 8px;
     position: relative;
     /* background: rgb(248, 224, 224); */
-    color: maroon;
-    background: #e1e1e1;
+    color: var(--light-shade);
+    background: var(--dark-shade);
+    /* background: var(--dark-shade); */
+    /* background: #e1e1e1; */
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
@@ -260,7 +279,10 @@ a:link.button {
     bottom: 0;
     left: 0;
     right: 0;
-    background: crimson;
+    background: var(--shrimp-red);
+
+    /* background: #f44336; */
+    /* background: crimson; */
     /* background: #2098D1; */
     border-radius: 8px;
     -webkit-transform: scaleX(0);
@@ -276,7 +298,8 @@ a:link.button {
 }
 
 .shutter:hover, .shutter:focus, .shutter:active {
-    color: white;
+    color: var(--light-shade);
+    /* color: white; */
 }
 
 .shutter:hover:before, .shutter:focus:before, .shutter:active:before {
@@ -290,8 +313,10 @@ a:link.button {
  ************/
 
 #faq {
-    background: rgb(231, 163, 37);
-    color: maroon;
+    background-color: var(--dark-accent);
+    color: var(--light-shade);
+    /* background: rgb(231, 163, 37);
+    color: maroon; */
 }
 
 #faq h2 {
